@@ -1,0 +1,17 @@
+# 将服务暴露到k8s集群外部（这个方式需要部署ingress-nginx）
+
+#apiVersion: extensions/v1beta1
+#kind: Ingress
+#metadata:
+#  namespace: consul
+#  name: ingress-consul
+#  annotations:
+#    kubernets.io/ingress.class: "nginx"
+#spec:
+#  rules:
+#    - host: consul.local
+#      http:
+#        paths:
+#          - backend:
+#              serviceName: consul
+#              servicePort: 8500
